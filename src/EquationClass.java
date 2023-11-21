@@ -13,10 +13,11 @@ public class EquationClass {
         setName(getName() + " " + letter);
     }
     public void removeLetter() {
-        if (getName().substring(getName().length()).equals(" ")) {
-
+        if (name.length() - 1 == name.indexOf(" ")) {
+            setName(getName().substring(0, getName().length() - 2));
+        } else {
+            setName(getName().substring(0, getName().length() - 1));
         }
-        setName(getName())
     }
 
 }
