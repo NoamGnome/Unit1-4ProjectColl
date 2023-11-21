@@ -9,5 +9,14 @@ public class EquationClass {
     public String getName() {
         return name;
     }
+    public void addLetter(String letter) {
+        setName(getName() + " " + letter);
+    }
+    public void removeLetter() {
+        if (getName().substring(getName().length()).equals(" ")) {
+
+        }
+        setName(getName())
+    }
 
 }
