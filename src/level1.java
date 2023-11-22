@@ -1,6 +1,9 @@
+import java.util.Scanner;
 public class level1 {
-    private String user_answer = "";
+    Scanner scan = new Scanner(System.in);
+    EquationClass eq = new EquationClass();
     private int random = 0;
+    boolean correct = false;
     private String an1 = "5";
     private String an2 = "8";
     private String an3 = "5";
@@ -11,45 +14,157 @@ public class level1 {
     private String an8 = "9";
     private String an9 = "8";
     private String an10 = "3";
-    public void level1() {
-        random = (int) ((Math.random() * 100) / 10);
+    public int random() {
+        return random = (int) ((Math.random() * 100) / 10);
     }
-    public String chooser() {
-        String eq1 = "7 + x = 12";
-        String eq2 = "16 - x = 8";
-        String eq3 = "x / 1 = 5";
-        String eq4 = "x + 9 = 17";
-        String eq5 = "x * 6 = 18";
-        String eq6 = "36 / x = 4";
-        String eq7 = "x + 6 = 13";
-        String eq8 = "18 - x = 9";
-        String eq9 = "15 - x = 7";
-        String eq10 = "x * 3 = 9";
+
+    public void checkAnswer(String answer) {
         if (random == 1) {
-            return eq1;
+            if (answer.equals(an1)) {
+                correct = true;
+                System.out.print("CORRECT! +1");
+                System.out.println();
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+            } else {
+                System.out.print("INCORRECT! -1");
+            }
         } else if (random == 2) {
-            return eq2;
+            if (answer.equals(an2)) {
+                correct = true;
+                System.out.print("CORRECT! +1");
+                System.out.println();
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+            } else {
+                System.out.print("INCORRECT! -1");
+            }
         } else if (random == 3) {
-            return eq3;
+            if (answer.equals(an3)) {
+                correct = true;
+                System.out.print("CORRECT! +1");
+                System.out.println();
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+            } else {
+                System.out.print("INCORRECT! -1");
+            }
         } else if (random == 4) {
-            return eq4;
+            if (answer.equals(an4)) {
+                correct = true;
+                System.out.print("CORRECT! +1");
+                System.out.println();
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+            } else {
+                System.out.print("INCORRECT! -1");
+            }
         } else if (random == 5) {
-            return eq5;
+            if (answer.equals(an5)) {
+                correct = true;
+                System.out.print("CORRECT! +1");
+                System.out.println();
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+            } else {
+                System.out.print("INCORRECT! -1");
+            }
         } else if (random == 6) {
-            return eq6;
+            if (answer.equals(an6)) {
+                correct = true;
+                System.out.print("CORRECT! +1");
+                System.out.println();
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+            } else {
+                System.out.print("INCORRECT! -1");
+            }
         } else if (random == 7) {
-            return eq7;
+            if (answer.equals(an7)) {
+                correct = true;
+                System.out.print("CORRECT! +1");
+                System.out.println();
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+            } else {
+                System.out.print("INCORRECT! -1");
+            }
         } else if (random == 8) {
-            return eq8;
+            if (answer.equals(an8)) {
+                correct = true;
+                System.out.print("CORRECT! +1");
+                System.out.println();
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+            } else {
+                System.out.print("INCORRECT! -1");
+            }
         } else if (random == 9) {
-            return eq9;
+            if (answer.equals(an9)) {
+                correct = true;
+                System.out.print("CORRECT! +1");
+                System.out.println();
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+            } else {
+                System.out.print("INCORRECT! -1");
+            }
         } else {
-            return eq10;
+            if (answer.equals(an10)) {
+                correct = true;
+                System.out.print("CORRECT! +1");
+                System.out.println();
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+            } else {
+                System.out.print("INCORRECT! -1");
+            }
         }
     }
-    public void String answer() {
-        if (chooser() == eq1);
-
+    public String chooser(int random) {
+        String eq;
+        if (random == 1) {
+            eq = "7 + x = 12";
+        } else if (random == 2) {
+            eq = "16 - x = 8";
+        } else if (random == 3) {
+            eq = "x / 1 = 5";
+        } else if (random == 4) {
+            eq = "x + 9 = 17";
+        } else if (random == 5) {
+            eq = "x * 6 = 18";
+        } else if (random == 6) {
+            eq = "36 / x = 4";
+        } else if (random == 7) {
+            eq = "x + 6 = 13";
+        } else if (random == 8) {
+            eq = "18 - x = 9";
+        } else if (random == 9) {
+            eq = "15 - x = 7";
+        } else {
+            eq = "x * 3 = 9";
+        }
+        return eq;
     }
 
 }
