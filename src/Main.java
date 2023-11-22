@@ -26,13 +26,10 @@ public class Main {
             System.out.println(l1.chooser(random));
             System.out.print("What is x: ");
             String answer = scan.nextLine();
-            if (l1.checkAnswer(answer)) {
-                System.out.print("Please enter a letter to your name: ");
-                String letter = scan.nextLine();
-                eq.addLetter(letter);
-                System.out.println(eq.getName());
+            if (l1.correct) {
+
             }
-            if (!l1.checkAnswer(answer)) {
+            if (!l1.correct) {
                 life--;
                 System.out.println();
                 System.out.println("You lose a letter! WOMP WOMP!");
