@@ -10,7 +10,12 @@ public class EquationClass {
         return name;
     }
     public void addLetter(String letter) {
-        setName(getName() + " " + letter);
+        if (name.contains(" ")) {
+            setName(getName() + letter);
+        }
+        if (!name.contains(" ")) {
+            setName(getName() + " " + letter);
+        }
     }
     public void removeLetter() {
         if (name.length() - 1 == name.indexOf(" ")) {
