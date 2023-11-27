@@ -26,16 +26,20 @@ public class Main {
             System.out.println(l1.chooser(random));
             System.out.print("What is x: ");
             String answer = scan.nextLine();
+            l1.checkAnswer(answer);
             if (l1.correct) {
-
+                System.out.print("Please enter a letter to your name: ");
+                String letter = scan.nextLine();
+                eq.addLetter(letter);
+                System.out.println(eq.getName());
+                life++;
             }
             if (!l1.correct) {
-                life--;
-                System.out.println();
-                System.out.println("You lose a letter! WOMP WOMP!");
                 eq.removeLetter();
                 System.out.println("NEW NAME: " + eq.getName());
+                life--;
             }
         }
+        System.out.print("GAME OVER");
     }
 }
