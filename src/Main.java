@@ -6,15 +6,7 @@ public class Main {
         level1 l1 = new level1();
         int correct = 0;
         int level1Streak = 0;
-        System.out.println("|-----------------------|");
-        System.out.println("|Welcome to LifeEquation|");
-        System.out.println("|-----------------------|");
-        System.out.println("|--------------------------------------------|");
-        System.out.println("|Your name is your health!                   |");
-        System.out.println("|You lose a letter for each incorrect answer!|");
-        System.out.println("|once you get three right, it gets harder!   |");
-        System.out.println("|--------------------------------------------|");
-        System.out.print("Please enter your name: ");
+       printIntro();
         String name = scan.nextLine();
         String originalName = eq.getName();
         eq.setName(name);
@@ -51,5 +43,17 @@ public class Main {
         }
         System.out.println("GAME OVER!");
         System.out.print("Thanks for playing " + name);
+    }
+    public static void printIntro()
+    {
+        System.out.println("|-----------------------|");
+        System.out.println("|Welcome to LifeEquation|");
+        System.out.println("|-----------------------|");
+        System.out.println("|--------------------------------------------|");
+        System.out.println("|Your name is your health!                   |");
+        System.out.println("|You lose a letter for each incorrect answer!|");
+        System.out.println("|once you get three right, it gets harder!   |");
+        System.out.println("|--------------------------------------------|");
+        System.out.print("Please enter your name: ");
     }
 }
