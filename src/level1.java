@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 public class level1 {
-    ArrayList<Integer> equations = new ArrayList<Integer>();
+    private ArrayList<Integer> equations = new ArrayList<Integer>();
     Scanner scan = new Scanner(System.in);
     EquationClass eq = new EquationClass();
     boolean one = true;
@@ -13,20 +13,28 @@ public class level1 {
     boolean seven = true;
     boolean eight = true;
     boolean nine = true;
-    private int random = 0;
+    private int random;
     boolean correct = false;
 
+    public void populate()
+    {
+        for(int i = 1; i < 11; i++)
+        {
+            equations.add(i);
+        }
+    }
+    //DOTADIW:  Do one thing, and do it well.
     public int random() {
-        equations.add(1);
-        equations.add(2);
-        equations.add(3);
-        equations.add(4);
-        equations.add(5);
-        equations.add(6);
-        equations.add(7);
-        equations.add(8);
-        equations.add(9);
-        equations.add(10);
+//        equations.add(1);
+//        equations.add(2);
+//        equations.add(3);
+//        equations.add(4);
+//        equations.add(5);
+//        equations.add(6);
+//        equations.add(7);
+//        equations.add(8);
+//        equations.add(9);
+//        equations.add(10);
         random = (int) (Math.random() * equations.size());
         return random;
     }
