@@ -1,6 +1,6 @@
-public class EquationClass {
+public class Name {
     private String name = "";
-    public EquationClass() {
+    public Name() {
         this.name = name;
     }
     public void setName(String newName) {
