@@ -2,20 +2,22 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        EquationClass eq = new EquationClass();
-        level1 l1 = new level1();
+        Name eq = new Name();
+        Level1 l1 = new Level1();
         int correct = 0;
         int level1Streak = 0;
-       printIntro();
+        printIntro();
         String name = scan.nextLine();
         String originalName = eq.getName();
         eq.setName(name);
+        l1.populate();
         System.out.println();
         System.out.println("Nice to meet you " + eq.getName() + "!");
         System.out.println("Player stats: ");
         System.out.println("Health bar: " + eq.getName());
         int life = eq.getName().length();
         while (life != 0) {
+            life = eq.getName().length();
             System.out.println("Equations correct: " + correct);
             int random = l1.random();
             System.out.println(l1.chooser(random));
