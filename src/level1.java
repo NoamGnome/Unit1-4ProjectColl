@@ -1,41 +1,21 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-public class level1 {
-    private ArrayList<Integer> equations = new ArrayList<Integer>();
-    Scanner scan = new Scanner(System.in);
-    EquationClass eq = new EquationClass();
-    boolean one = true;
-    boolean two = true;
-    boolean three = true;
-    boolean four = true;
-    boolean five = true;
-    boolean six = true;
-    boolean seven = true;
-    boolean eight = true;
-    boolean nine = true;
+public class Level1 {
+    ArrayList<Integer> equations = new ArrayList<>();
     private int random;
     boolean correct = false;
 
     public void populate()
     {
-        for(int i = 1; i < 11; i++)
+        for(int i = 1; i < 10; i++)
         {
             equations.add(i);
         }
     }
     //DOTADIW:  Do one thing, and do it well.
     public int random() {
-//        equations.add(1);
-//        equations.add(2);
-//        equations.add(3);
-//        equations.add(4);
-//        equations.add(5);
-//        equations.add(6);
-//        equations.add(7);
-//        equations.add(8);
-//        equations.add(9);
-//        equations.add(10);
-        random = (int) (Math.random() * equations.size());
+        int index = (int) (Math.random() * equations.size());
+        random = equations.get(index);
         return random;
     }
 
@@ -133,50 +113,41 @@ public class level1 {
     }
     public String chooser(int random) {
         String eq = "";
-        if (random == 1 && one) {
+        if (random == 1) {
             eq = "7 + x = 12";
-            equations.remove(0);
-            one = false;
+            equations.remove(Integer.valueOf(1));
         }
-        if (random == 2 && two) {
+        if (random == 2) {
             eq = "16 - x = 8";
-            equations.remove(1);
-            two = false;
+            equations.remove(Integer.valueOf(2));
         }
-        if (random == 3 && three) {
+        if (random == 3) {
             eq = "x / 1 = 5";
-            equations.remove(2);
-            three = false;
+            equations.remove(Integer.valueOf(3));
         }
-        if (random == 4 && four) {
+        if (random == 4) {
             eq = "x + 9 = 17";
-            equations.remove(3);
-            four = false;
+            equations.remove(Integer.valueOf(4));
         }
-        if (random == 5 && five) {
+        if (random == 5) {
             eq = "x * 6 = 18";
-            equations.remove(4);
-            five = false;
+            equations.remove(Integer.valueOf(5));
         }
-        if (random == 6 && six) {
+        if (random == 6) {
             eq = "36 / x = 4";
-            equations.remove(5);
-            six = false;
+            equations.remove(Integer.valueOf(6));
         }
-        if (random == 7 && seven) {
+        if (random == 7) {
             eq = "x + 6 = 13";
-            equations.remove(6);
-            seven = false;
+            equations.remove(Integer.valueOf(7));
         }
-        if (random == 8 && eight) {
+        if (random == 8) {
             eq = "18 - x = 9";
-            equations.remove(7);
-            eight = false;
+            equations.remove(Integer.valueOf(8));
         }
-        if (random == 9 && nine) {
+        if (random == 9) {
             eq = "15 - x = 7";
-            equations.remove(8);
-            nine = false;
+            equations.remove(Integer.valueOf(9));
         }
         return eq;
     }
