@@ -1,1 +1,155 @@
+import java.util.ArrayList;
+public class Level3 {
+    ArrayList<Integer> equation = new ArrayList<>();
+    private int random;
+    boolean correct = false;
+
+    public void populate()
+    {
+        for(int i = 1; i < 10; i++)
+        {
+            equation.add(i);
+        }
+    }
+    //DOTADIW:  Do one thing, and do it well.
+    public int random() {
+        int index = (int) (Math.random() * equation.size());
+        random = equation.get(index);
+        return random;
+    }
+
+    public void checkAnswer(String answer) {
+        if (random == 1) {
+            String an1 = "2";
+            if (answer.equals(an1)) {
+                correct = true;
+                System.out.println("CORRECT! +1");
+            } else {
+                correct = false;
+                System.out.println("INCORRECT! -1");
+            }
+        }
+        if (random == 2) {
+            String an2 = "4";
+            if (answer.equals(an2)) {
+                correct = true;
+                System.out.println("CORRECT! +1");
+            } else {
+                correct = false;
+                System.out.println("INCORRECT! -1");
+            }
+        }
+        if (random == 3) {
+            String an3 = "1";
+            if (answer.equals(an3)) {
+                correct = true;
+                System.out.println("CORRECT! +1");
+            } else {
+                correct = false;
+                System.out.println("INCORRECT! -1");
+            }
+        }
+        if (random == 4) {
+            String an4 = "-4";
+            if (answer.equals(an4)) {
+                correct = true;
+                System.out.println("CORRECT! +1");
+            } else {
+                correct = false;
+                System.out.println("INCORRECT! -1");
+            }
+        }
+        if (random == 5) {
+            String an5 = "3";
+            if (answer.equals(an5)) {
+                correct = true;
+                System.out.println("CORRECT! +1");
+            } else {
+                correct = false;
+                System.out.println("INCORRECT! -1");
+            }
+        }
+        if (random == 6) {
+            String an6 = "2";
+            if (answer.equals(an6)) {
+                correct = true;
+                System.out.println("CORRECT! +1");
+            } else {
+                correct = false;
+                System.out.println("INCORRECT! -1");
+            }
+        }
+        if (random == 7) {
+            String an7 = "-3";
+            if (answer.equals(an7)) {
+                correct = true;
+                System.out.println("CORRECT! +1");
+            } else {
+                correct = false;
+                System.out.println("INCORRECT! -1");
+            }
+        }
+        if (random == 8) {
+            String an8 = "3";
+            if (answer.equals(an8)) {
+                correct = true;
+                System.out.println("CORRECT! +1");
+            } else {
+                correct = false;
+                System.out.println("INCORRECT! -1");
+            }
+        }
+        if (random == 9) {
+            String an9 = "0";
+            if (answer.equals(an9)) {
+                correct = true;
+                System.out.println("CORRECT! +1");
+            } else {
+                correct = false;
+                System.out.println("INCORRECT! -1");
+            }
+        }
+    }
+    public String chooser(int random) {
+        String eq = "";
+        if (random == 1) {
+            eq = "y = 6x - 11\n-2x - 3y = -7";
+            equation.remove(Integer.valueOf(1));
+        }
+        if (random == 2) {
+            eq = "2x - 3y = -1\ny = x - 1";
+            equation.remove(Integer.valueOf(2));
+        }
+        if (random == 3) {
+            eq = "y = -3x + 5\n5x - 4y = -3";
+            equation.remove(Integer.valueOf(3));
+        }
+        if (random == 4) {
+            eq = "-3x -3y = 3\ny = -5x - 17";
+            equation.remove(Integer.valueOf(4));
+        }
+        if (random == 5) {
+            eq = "y = -2\n4x - 3y = 18";
+            equation.remove(Integer.valueOf(5));
+        }
+        if (random == 6) {
+            eq = "y = 5x - 7\n-3x - 2y = -12";
+            equation.remove(Integer.valueOf(6));
+        }
+        if (random == 7) {
+            eq = "-4x + y = 6\n-5x - y = 21";
+            equation.remove(Integer.valueOf(7));
+        }
+        if (random == 8) {
+            eq = "-7x - 2y = -13\nx - 2y = 11";
+            equation.remove(Integer.valueOf(8));
+        }
+        if (random == 9) {
+            eq = "-5x + y = -2\n-3x + 6y = -12";
+            equation.remove(Integer.valueOf(9));
+        }
+        return eq;
+    }
+
+}
 
