@@ -1,8 +1,5 @@
 public class Name {
     private String name = "";
-    public Name() {
-        this.name = name;
-    }
     public void setName(String newName) {
         name = newName;
     }
@@ -10,11 +7,8 @@ public class Name {
         return name;
     }
     public void addLetter(String letter) {
-        if (name.contains(" ")) {
+        if (name.length() < 8) {
             setName(getName() + letter);
-        }
-        if (!name.contains(" ")) {
-            setName(getName() + " " + letter);
         }
     }
     public void removeLetter() {
