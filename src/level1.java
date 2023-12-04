@@ -1,9 +1,8 @@
-import java.util.Scanner;
 import java.util.ArrayList;
 public class Level1 {
     ArrayList<Integer> equations = new ArrayList<>();
     private int random;
-    boolean correct = false;
+    boolean correct = true;
 
     public void populate()
     {
